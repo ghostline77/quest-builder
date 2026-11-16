@@ -1,200 +1,28 @@
-@layer theme, base, app-layout, components, utilities;
-@import "../style.css" layer(app-layout);
-@import "../story.css" layer(app-layout);
-@import "@ghostline/ui-core/styles.css";
-@import "@ghostline/ui-core/controller.css";
-.gl-root {
-  min-height: 100dvh;
-}
-.gl-root > header {
-  height: auto;
-  min-height: 78px;
-}
-.gl-root > header > div {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.gl-root .shell {
-  flex: 1;
-  min-height: 0;
-}
-.gl-app-shell {
-  height: 100dvh;
-}
-.gl-app-shell .gl-project-context .project-picker {
-  border: 0;
-  padding: 0;
-}
-.gl-app-shell .gl-project-context .project-picker,
-.gl-app-shell .gl-project-context .quest-picker {
-  gap: 8px;
-  min-width: 0;
-}
-.gl-app-shell .gl-project-context #workspace,
-.gl-app-shell .gl-project-context #quest-select {
-  width: 180px;
-  max-width: 100%;
-}
-.gl-app-shell #project-nav {
-  height: auto;
-  min-height: 48px;
-  padding: 8px 24px;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.gl-app-shell #project-nav button {
-  min-height: 36px;
-}
-.gl-app-shell .story-toolbar {
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-.gl-app-shell
-  :where(.view-switch, .stage-number, .graph, .story-notice, .advanced-menu) {
-  border-color: var(--color-line);
-}
-.gl-app-shell .view-switch {
-  background: var(--color-panel);
-}
-.gl-app-shell .stage-heading {
-  padding: 16px 20px;
-}
-.gl-app-shell .stage-heading:hover {
-  background: #c6ee8308;
-}
-.gl-app-shell .stage-grip {
-  border: 0;
-  padding: 0;
-}
-.gl-app-shell .stage-number {
-  background: var(--color-panel);
-  color: var(--color-foreground);
-}
-.gl-app-shell .selected .stage-number {
-  background: var(--color-accent);
-  color: var(--color-accent-ink);
-}
-.gl-app-shell .stage-content {
-  padding-block: 8px 24px;
-}
-.gl-app-shell
-  :where(.meeting-sentence, .section-toolbar, .library-toolbar, .row) {
-  flex-wrap: wrap;
-  gap: 12px;
-}
-body:not(.advanced) .gl-app-shell h1 {
-  font-size: clamp(28px, 3.4vw, 42px);
-}
-body:not(.advanced) .gl-app-shell .document-bar {
-  padding: 28px 32px 0;
-}
-body:not(.advanced) .gl-app-shell #editor {
-  padding: 24px 32px 48px;
-}
-@media (max-width: 1000px) {
-  .gl-app-shell .gl-project-context {
-    flex: 1;
-  }
-  .gl-app-shell .gl-project-context .project-picker,
-  .gl-app-shell .gl-project-context .quest-picker {
-    flex: 1;
-  }
-  .gl-app-shell .gl-project-context select {
-    flex: 1;
-  }
-}
-@media (max-width: 700px) {
-  body:has(.gl-app-shell) {
-    height: auto;
-    overflow: auto;
-  }
-  .gl-app-shell {
-    height: auto;
-  }
-  .gl-app-shell .gl-project-context {
-    display: grid;
-    flex: 0 0 100%;
-    grid-template-columns: minmax(0, 1fr);
-    width: 100%;
-  }
-  .gl-app-shell .gl-project-context .project-picker,
-  .gl-app-shell .gl-project-context .quest-picker {
-    display: grid;
-    grid-template-columns: 50px minmax(0, 1fr);
-  }
-  .gl-app-shell .gl-project-context #workspace,
-  .gl-app-shell .gl-project-context #quest-select {
-    width: 100%;
-  }
-  .gl-app-shell #project-nav {
-    padding: 8px 16px;
-  }
-  .gl-app-shell #project-nav button {
-    flex: 1;
-    padding-inline: 8px;
-  }
-  body:not(.advanced) .gl-app-shell .shell,
-  body:not(.advanced) .gl-app-shell main {
-    height: auto;
-    overflow: visible;
-  }
-  body:not(.advanced) .gl-app-shell .document-bar {
-    padding: 24px 16px 0;
-  }
-  body:not(.advanced) .gl-app-shell #editor {
-    padding: 20px 16px 40px;
-  }
-  .gl-app-shell .story-toolbar {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .gl-app-shell .story-toolbar .view-switch {
-    grid-column: 1/-1;
-    width: 100%;
-  }
-  .gl-app-shell .view-switch button {
-    flex: 1;
-    min-width: 0;
-  }
-  .gl-app-shell .story-toolbar > .primary {
-    margin-left: 0;
-    justify-content: center;
-  }
-  .gl-app-shell .stage-heading {
-    padding: 16px 8px;
-  }
-  .gl-app-shell .stage-content {
+@import "@ghostline/ui-core/tailwind.css";
+@source "./**/*.{ts,tsx}";
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
     margin: 0;
-    padding-left: 0;
   }
-  .gl-app-shell .meeting-sentence > select {
-    width: 100%;
-    max-width: 100%;
+  body {
+    background: var(--color-background);
   }
-  body.advanced .gl-app-shell .shell {
-    display: flex;
-    flex-direction: column;
-    height: auto;
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
   }
-  body.advanced .gl-app-shell #sidebar,
-  body.advanced .gl-app-shell #inspector {
-    display: flex;
-    flex-direction: column;
-    max-height: none;
-    overflow: visible;
+  summary {
+    cursor: pointer;
   }
-  body.advanced .gl-app-shell main {
-    min-height: 450px;
-    overflow: visible;
-  }
-  .gl-app-shell .document-bar,
-  .gl-app-shell .bottom-heading {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .gl-app-shell #editor {
-    padding: 16px;
+  textarea:focus-visible,
+  svg [tabindex]:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
   }
 }

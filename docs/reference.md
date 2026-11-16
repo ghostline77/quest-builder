@@ -270,9 +270,8 @@ each required character once and reuses it across quests. Generated character
 resources and TweakXL are included automatically by the packager; package profiles
 need no character-specific file lists. Conflicting resources across builds fail.
 
-The builder is found beside the executable, in the sibling character-builder's
-release/debug output, or on PATH. `--character-builder` overrides it; `--catalogue`
-selects the item catalogue (default: sibling `items/dist/catalogue`). Character
+The builder is found beside the executable, or on PATH. `--character-builder` overrides it; `--catalogue`
+selects the item catalogue (by default, `GHOSTLINE_ITEMS_CATALOGUE` or the project’s `catalogue` directory). Character
 generation requires `--game`; reflection is automatic. Planned quests validate their character
 references without generating them until selected for compilation.
 

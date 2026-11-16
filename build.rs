@@ -38,6 +38,7 @@ fn npm(root: &Path, arguments: &[&str]) {
         Command::new("npm")
     };
     let status = command
+        .arg("--workspaces=false")
         .args(arguments)
         .current_dir(root)
         .status()

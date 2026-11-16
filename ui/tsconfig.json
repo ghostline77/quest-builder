@@ -1,26 +1,5 @@
 {
-  "compilerOptions": {
-    "target": "ES2022",
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "module": "ESNext",
-    "moduleDetection": "force",
-    "moduleResolution": "Bundler",
-    "jsx": "react-jsx",
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "verbatimModuleSyntax": true,
-    "noEmit": true,
-    "allowJs": true,
-    "checkJs": false
-  },
-  "include": [
-    "src"
-  ]
+  "extends": "@ghostline/ui-core/tsconfig.json",
+  "compilerOptions": { "allowJs": false, "noUnusedLocals": true, "noUnusedParameters": true },
+  "include": ["src", "tests", "vite.config.ts", "playwright.config.ts"]
 }

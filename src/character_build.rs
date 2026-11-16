@@ -172,11 +172,12 @@ impl Characters {
                 let builder = options
                     .character_builder
                     .clone()
-                    .unwrap_or_else(|| default_builder(&self.root));
+                    .unwrap_or_else(default_builder);
                 let catalogue = options
                     .catalogue
                     .clone()
-                    .unwrap_or_else(|| self.root.join("../items/dist/catalogue"));
+                    .or_else(|| std::env::var_os("GHOSTLINE_ITEMS_CATALOGUE").map(PathBuf::from))
+                    .unwrap_or_else(|| self.root.join("catalogue"));
                 let directory = output.join(&id);
                 eprintln!("Building series character {id}");
                 let result = Command::new(&builder)
@@ -267,7 +268,7 @@ impl Characters {
     }
 }
 
-fn default_builder(root: &Path) -> PathBuf {
+fn default_builder() -> PathBuf {
     let name = format!(
         "ghostline-character-builder{}",
         std::env::consts::EXE_SUFFIX
@@ -277,13 +278,6 @@ fn default_builder(root: &Path) -> PathBuf {
         && let Some(parent) = executable.parent()
     {
         candidates.push(parent.join(&name));
-    }
-    for profile in ["release", "debug"] {
-        candidates.push(
-            root.join("../character-builder/target")
-                .join(profile)
-                .join(&name),
-        );
     }
     candidates
         .into_iter()

@@ -487,19 +487,10 @@ async fn asset(axum::extract::Path(name): axum::extract::Path<String>) -> Respon
             "text/javascript; charset=utf-8",
             include_str!("../ui/dist/assets/app.js"),
         ),
-        "story.js" => (
-            "text/javascript; charset=utf-8",
-            include_str!("../ui/story.js"),
-        ),
-        "stage-fields.js" => (
-            "text/javascript; charset=utf-8",
-            include_str!("../ui/stage-fields.js"),
-        ),
         "style.css" => (
             "text/css; charset=utf-8",
             include_str!("../ui/dist/assets/style.css"),
         ),
-        "story.css" => ("text/css; charset=utf-8", include_str!("../ui/story.css")),
         "font-license.txt" => (
             "text/plain; charset=utf-8",
             include_str!("../ui/fonts/LICENSE.txt"),

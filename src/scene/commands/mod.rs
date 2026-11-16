@@ -148,7 +148,7 @@ mod tests {
         assert_eq!(additional["type"], "WithCompanion");
         let companion = &additional["withCompanionParams"];
         assert_eq!(companion["companionDistancePreset"], "Close");
-        assert_eq!(companion["catchUpWithCompanion"], false);
+        assert_eq!(companion["catchUpWithCompanion"], 0);
         assert_eq!(companion["teleportToCompanion"], false);
         // The empty native universal reference uses its local-player default.
         assert_eq!(
