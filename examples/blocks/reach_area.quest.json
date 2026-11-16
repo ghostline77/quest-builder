@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "example_reach_area",
+  "title": "Reach area",
+  "description": "Activate an objective and map pin until the player enters its trigger.",
+  "stages": [
+    {
+      "id": "reach_area",
+      "type": "reach_area",
+      "status": "ready",
+      "phase_resource": "mod\\example_reach_area\\phases\\reach_area.questphase",
+      "trigger": "#example_reach_area_tr_relay",
+      "objective": "quests/minor_quest/example_reach_area/task",
+      "description_entry": "quests/minor_quest/example_reach_area/task/description",
+      "mappin": "quests/minor_quest/example_reach_area/task/location"
+    }
+  ]
+}

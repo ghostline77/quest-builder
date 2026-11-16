@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "example_phone_call",
+  "title": "Phone call",
+  "description": "Start an audio call between journal contacts.",
+  "stages": [
+    {
+      "id": "phone_call",
+      "type": "phone_call",
+      "status": "ready",
+      "phase_resource": "mod\\example_phone_call\\phases\\phone_call.questphase",
+      "caller": "contacts/fixer",
+      "addressee": "contacts/player",
+      "action": "StartCall",
+      "prefab": "#holocalls_studio"
+    }
+  ],
+  "phase_prefabs": [
+    "#holocalls_studio"
+  ]
+}

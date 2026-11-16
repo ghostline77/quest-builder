@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "example_read_shard",
+  "title": "Read shard",
+  "description": "Wait for item acquisition and a journal readable's read state.",
+  "stages": [
+    {
+      "id": "read_shard",
+      "type": "read_shard",
+      "status": "ready",
+      "phase_resource": "mod\\example_read_shard\\phases\\read_shard.questphase",
+      "journal_entry": "onscreens/example_read_shard_datacache",
+      "file_entry_index": 1,
+      "item": "Items.example_read_shard_datacache",
+      "objective": "quests/minor_quest/example_read_shard/task"
+    }
+  ]
+}

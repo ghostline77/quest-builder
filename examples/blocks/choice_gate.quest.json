@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "example_choice_gate",
+  "title": "Choice gate",
+  "description": "Wait for a fact-based choice, set its result fact and join the route.",
+  "stages": [
+    {
+      "id": "choice_gate",
+      "type": "choice_gate",
+      "status": "ready",
+      "phase_resource": "mod\\example_choice_gate\\phases\\choice_gate.questphase",
+      "gate_kind": "fact",
+      "branches": [
+        {
+          "id": "left",
+          "condition": "example_choice_gate_left",
+          "set_fact": "example_choice_gate_chose_left"
+        },
+        {
+          "id": "right",
+          "condition": "example_choice_gate_right",
+          "set_fact": "example_choice_gate_chose_right"
+        }
+      ],
+      "join": true
+    }
+  ]
+}

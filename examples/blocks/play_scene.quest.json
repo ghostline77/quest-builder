@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "example_play_scene",
+  "title": "Play a scene",
+  "stages": [{
+    "id": "activity",
+    "type": "play_scene",
+    "status": "ready",
+    "phase_resource": "mod\\example_play_scene\\activity.questphase",
+    "scene": "mod\\example_play_scene\\activity.scene",
+    "origin": "#example_scene_origin",
+    "wait_trigger": "#example_approach",
+    "spawners": ["#example_npc"],
+    "despawn_after": true,
+    "completion_fact": "example_activity_completed"
+  }]
+}

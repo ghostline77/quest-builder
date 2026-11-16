@@ -1,0 +1,8 @@
+{
+  "kind": "personal_link_attempt",
+  "depot": "mod\\signal\\phases\\transfer_attempt.questphase",
+  "device": "#signal_access_point",
+  "duration_seconds": 5,
+  "label": "Transferring data",
+  "bottom_text": "Keep the personal link connected"
+}

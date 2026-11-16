@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "example_vehicle_cleanup",
+  "title": "Vehicle cleanup",
+  "description": "Disable a quest vehicle entitlement and deactivate temporary communities.",
+  "stages": [
+    {
+      "id": "vehicle_cleanup",
+      "type": "vehicle_cleanup",
+      "status": "ready",
+      "phase_resource": "mod\\example_vehicle_cleanup\\phases\\vehicle_cleanup.questphase",
+      "player_vehicle_record": "Vehicle.example_vehicle_cleanup_vehicle",
+      "completion_fact": "example_vehicle_cleanup_vehicle_cleanup",
+      "cleanup_communities": [
+        "#owned_car_a",
+        "#owned_car_b"
+      ]
+    }
+  ]
+}

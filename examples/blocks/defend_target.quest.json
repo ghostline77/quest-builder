@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "example_defend_target",
+  "title": "Defend target",
+  "description": "Monitor a protected actor until an external completion signal or actor failure.",
+  "stages": [
+    {
+      "id": "defend_target",
+      "type": "defend_target",
+      "status": "ready",
+      "phase_resource": "mod\\example_defend_target\\phases\\defend_target.questphase",
+      "community": "#example_defend_target_allies",
+      "entry": "protected",
+      "completion_fact": "example_defend_target_defense_complete",
+      "failure_fact": "example_defend_target_target_failed",
+      "objective": "quests/minor_quest/example_defend_target/task"
+    }
+  ]
+}

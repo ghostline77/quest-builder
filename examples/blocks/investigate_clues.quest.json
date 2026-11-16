@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "example_investigate_clues",
+  "title": "Investigate clues",
+  "description": "Scan two independent clues in either order.",
+  "stages": [
+    {
+      "id": "investigate_clues",
+      "type": "investigate_clues",
+      "status": "ready",
+      "phase_resource": "mod\\example_investigate_clues\\phases\\investigate_clues.questphase",
+      "objective": "quests/minor_quest/example_investigate_clues/task",
+      "description_entry": "quests/minor_quest/example_investigate_clues/task/description",
+      "required_count": 2,
+      "scan_order": "any",
+      "clues": [
+        {
+          "id": "terminal",
+          "object_ref": "#example_investigate_clues_terminal",
+          "completion_fact": "example_investigate_clues_terminal_scanned"
+        },
+        {
+          "id": "case",
+          "object_ref": "#example_investigate_clues_case",
+          "completion_fact": "example_investigate_clues_case_scanned"
+        }
+      ],
+      "completion_fact": "example_investigate_clues_complete"
+    }
+  ]
+}

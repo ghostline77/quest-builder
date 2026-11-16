@@ -1,0 +1,5 @@
+{
+  "name": "signal",
+  "builds": ["../work/signal-build"],
+  "active_roots": ["mod\\signal\\phases\\signal.questphase"]
+}

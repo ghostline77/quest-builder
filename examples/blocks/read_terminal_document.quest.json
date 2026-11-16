@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "example_read_terminal_document",
+  "title": "Read terminal document",
+  "description": "Power a computer and wait for its journal document to be read.",
+  "stages": [
+    {
+      "id": "read_terminal_document",
+      "type": "read_terminal_document",
+      "status": "ready",
+      "phase_resource": "mod\\example_read_terminal_document\\phases\\read_terminal_document.questphase",
+      "computer": "#example_read_terminal_document_terminal",
+      "document_entry": "onscreens/example_read_terminal_document/evidence",
+      "completion_fact": "example_read_terminal_document_read",
+      "objective": "quests/minor_quest/example_read_terminal_document/task"
+    }
+  ]
+}

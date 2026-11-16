@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "example_deliver_vehicle",
+  "title": "Deliver vehicle",
+  "description": "Wait for a vehicle inside a delivery area, stopped, with the player outside.",
+  "stages": [
+    {
+      "id": "deliver_vehicle",
+      "type": "deliver_vehicle",
+      "status": "ready",
+      "phase_resource": "mod\\example_deliver_vehicle\\phases\\deliver_vehicle.questphase",
+      "vehicle": "#example_deliver_vehicle_vehicle",
+      "destination": "#example_deliver_vehicle_destination",
+      "objective": "quests/minor_quest/example_deliver_vehicle/task",
+      "require_stop": true,
+      "require_player_exit": true,
+      "completion_fact": "vehicle_delivered",
+      "mappin": "quests/minor_quest/example_deliver_vehicle/task/location"
+    }
+  ]
+}

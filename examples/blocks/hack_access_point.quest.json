@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "example_hack_access_point",
+  "title": "Hack access point",
+  "description": "Send an access-point action and wait for its hacking-success predicate.",
+  "stages": [
+    {
+      "id": "hack_access_point",
+      "type": "hack_access_point",
+      "status": "ready",
+      "phase_resource": "mod\\example_hack_access_point\\phases\\hack_access_point.questphase",
+      "device": "#example_hack_access_point_access_point",
+      "controller_class": "AccessPointControllerPS",
+      "action": "QuestForceON",
+      "completion_function": "WasHackingMinigameSucceeded",
+      "success_fact": "example_hack_access_point_hacked"
+    }
+  ]
+}

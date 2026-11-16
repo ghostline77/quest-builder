@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "example_phone_conversation",
+  "title": "Phone conversation",
+  "description": "Show messages, offer two replies, send a final message and record completion.",
+  "stages": [
+    {
+      "id": "phone_conversation",
+      "type": "phone_conversation",
+      "status": "ready",
+      "phase_resource": "mod\\example_phone_conversation\\phases\\phone_conversation.questphase",
+      "contact": "fixer",
+      "thread": "contacts/fixer/example_phone_conversation",
+      "messages": [
+        "contacts/fixer/example_phone_conversation/01_msg_received",
+        "contacts/fixer/example_phone_conversation/02_msg_context"
+      ],
+      "choice_group": "contacts/fixer/example_phone_conversation/03_ch_response",
+      "choices": [
+        {
+          "choice": "contacts/fixer/example_phone_conversation/03_ch_response/03a_ch_professional",
+          "reply": "contacts/fixer/example_phone_conversation/04a_msg_professional"
+        },
+        {
+          "choice": "contacts/fixer/example_phone_conversation/03_ch_response/03b_ch_suspicious",
+          "reply": "contacts/fixer/example_phone_conversation/04b_msg_suspicious"
+        }
+      ],
+      "final_message": "contacts/fixer/example_phone_conversation/05_msg_more_work",
+      "completion_fact": "example_phone_conversation_completed",
+      "delay_seconds": 1
+    }
+  ]
+}

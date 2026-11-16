@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "example_observe_lethal",
+  "title": "Observe lethal",
+  "description": "Record lethal outcomes independently until an explicit stop fact.",
+  "stages": [
+    {
+      "id": "observe_lethal",
+      "type": "observe_lethal",
+      "status": "ready",
+      "phase_resource": "mod\\example_observe_lethal\\phases\\observe_lethal.questphase",
+      "targets": [
+        {
+          "community": "#example_observe_lethal_targets",
+          "entry": "target",
+          "killed_fact": "example_observe_lethal_killed"
+        }
+      ],
+      "stop_fact": "example_observe_lethal_observer_stop"
+    }
+  ]
+}

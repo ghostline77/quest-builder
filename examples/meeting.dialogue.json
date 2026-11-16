@@ -1,0 +1,14 @@
+{
+  "spoken_lines": [
+    {
+      "key": "welcome",
+      "string_id": "900001",
+      "speaker": "contact",
+      "addressee": "player",
+      "text": "I have a job for you.",
+      "audio_path": "mod\\signal\\voice\\meeting\\welcome.wem",
+      "duration_ms": 1600
+    }
+  ],
+  "choice_lines": []
+}

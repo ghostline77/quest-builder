@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "example_phone_job_offer",
+  "title": "Phone job offer",
+  "description": "Delay a phone offer and wait for its acceptance choice.",
+  "stages": [
+    {
+      "id": "phone_job_offer",
+      "type": "phone_job_offer",
+      "status": "ready",
+      "phase_resource": "mod\\example_phone_job_offer\\phases\\phone_job_offer.questphase",
+      "contact": "fixer",
+      "message": "contacts/fixer/offer/message",
+      "choice_group": "contacts/fixer/offer/choices",
+      "accept_choice": "contacts/fixer/offer/choices/accept",
+      "start_fact": "example_phone_job_offer_sent",
+      "accepted_fact": "example_phone_job_offer_accepted",
+      "delay_game_hours": 6
+    }
+  ]
+}

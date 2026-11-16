@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "example_reward_commit",
+  "title": "Reward commit",
+  "description": "Check possession, grant a missing reward, verify it and commit durably.",
+  "stages": [
+    {
+      "id": "reward_commit",
+      "type": "reward_commit",
+      "status": "ready",
+      "phase_resource": "mod\\example_reward_commit\\phases\\reward_commit.questphase",
+      "reported_fact": "example_reward_commit_reported",
+      "item": "Items.example_reward_token",
+      "quantity": 10,
+      "commit_fact": "example_reward_commit_reward_verified"
+    }
+  ]
+}

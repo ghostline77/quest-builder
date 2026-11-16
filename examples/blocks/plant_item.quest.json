@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "example_plant_item",
+  "title": "Plant item",
+  "description": "Observe personal-link installation while retaining the required tracker item.",
+  "stages": [
+    {
+      "id": "plant_item",
+      "type": "plant_item",
+      "status": "ready",
+      "phase_resource": "mod\\example_plant_item\\phases\\plant_item.questphase",
+      "item": "Items.example_plant_item_tracker",
+      "device": "#example_plant_item_target",
+      "controller_class": "AccessPointControllerPS",
+      "action": "TogglePersonalLink",
+      "completion_function": "IsPersonalLinkConnected",
+      "completion_fact": "example_plant_item_tracker_planted",
+      "objective": "quests/minor_quest/example_plant_item/task",
+      "consume_item": false
+    }
+  ]
+}

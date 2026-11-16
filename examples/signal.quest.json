@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "signal",
+  "title": "Signal",
+  "phase_prefabs": ["#signal"],
+  "stages": [
+    {
+      "id": "wait",
+      "type": "time_gate",
+      "phase_resource": "mod\\signal\\phases\\signal_wait.questphase",
+      "seconds": 3,
+      "completion_fact": "signal_wait_complete"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "example_interact_device",
+  "title": "Interact device",
+  "description": "Observe a terminal predicate without sending its action automatically.",
+  "stages": [
+    {
+      "id": "interact_device",
+      "type": "interact_device",
+      "status": "ready",
+      "phase_resource": "mod\\example_interact_device\\phases\\interact_device.questphase",
+      "device": "#example_interact_device_terminal",
+      "controller_class": "ComputerControllerPS",
+      "action": "QuestForceEnable",
+      "completion_function": "IsEnabled",
+      "send_action": false,
+      "success_fact": "example_interact_device_enabled"
+    }
+  ]
+}

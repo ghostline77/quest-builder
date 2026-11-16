@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "example_cyberpsycho_encounter",
+  "title": "Cyberpsycho encounter",
+  "description": "Reveal a boss, distinguish spared and killed outcomes and clean up outside.",
+  "stages": [
+    {
+      "id": "cyberpsycho_encounter",
+      "type": "cyberpsycho_encounter",
+      "status": "ready",
+      "phase_resource": "mod\\example_cyberpsycho_encounter\\phases\\cyberpsycho_encounter.questphase",
+      "community": "#example_cyberpsycho_encounter_com_psycho",
+      "boss_entry": "psycho",
+      "boss_character": "Character.example_cyberpsycho",
+      "activation_trigger": "#example_cyberpsycho_encounter_tr_outer",
+      "reveal": {
+        "trigger": "#example_cyberpsycho_encounter_tr_reveal",
+        "scan": true,
+        "attacked_by_boss": true,
+        "boss_hit_by_player": true,
+        "boss_sees_player": true
+      },
+      "arena_trigger": "#example_cyberpsycho_encounter_tr_arena",
+      "resolution": {
+        "allow_nonlethal": true,
+        "spared_fact": "example_cyberpsycho_encounter_spared",
+        "killed_fact": "example_cyberpsycho_encounter_killed"
+      },
+      "completion_fact": "example_cyberpsycho_encounter_resolved",
+      "cleanup": {
+        "trigger": "#example_cyberpsycho_encounter_tr_cleanup",
+        "deactivate_community": true
+      }
+    }
+  ]
+}

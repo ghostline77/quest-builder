@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "example_meet_contact",
+  "title": "Meet contact",
+  "description": "Spawn a contact and rearm a deferred meeting after the player leaves.",
+  "stages": [
+    {
+      "id": "meet_contact",
+      "type": "meet_contact",
+      "status": "ready",
+      "phase_resource": "mod\\example_meet_contact\\phases\\meet_contact.questphase",
+      "contact": "contact",
+      "community": "#example_meet_contact_contact",
+      "scene": "mod\\example_meet_contact\\scenes\\meeting.scene",
+      "objective": "quests/minor_quest/example_meet_contact/task",
+      "description_entry": "quests/minor_quest/example_meet_contact/task/description",
+      "mappin": "quests/minor_quest/example_meet_contact/task/location",
+      "setup_trigger": "#example_meet_contact_setup",
+      "scene_origin": "#example_meet_contact_origin",
+      "accepted_fact": "example_meet_contact_accepted",
+      "defer_policy": "rearm",
+      "rearm_trigger": "#example_meet_contact_rearm"
+    }
+  ]
+}

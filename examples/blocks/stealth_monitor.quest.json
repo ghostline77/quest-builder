@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "example_stealth_monitor",
+  "title": "Stealth monitor",
+  "description": "Race failure facts against a stop signal and record an optional result.",
+  "stages": [
+    {
+      "id": "stealth_monitor",
+      "type": "stealth_monitor",
+      "status": "ready",
+      "phase_resource": "mod\\example_stealth_monitor\\phases\\stealth_monitor.questphase",
+      "objective": "quests/minor_quest/example_stealth_monitor/task",
+      "failure_fact": "example_stealth_monitor_stealth_failed",
+      "success_fact": "example_stealth_monitor_stealth_succeeded",
+      "stop_fact": "example_stealth_monitor_stealth_stop",
+      "additional_failure_facts": [
+        "alarm_a",
+        "alarm_b"
+      ]
+    }
+  ]
+}

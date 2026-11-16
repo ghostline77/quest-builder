@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "example_enter_vehicle",
+  "title": "Enter vehicle",
+  "description": "Wait for the player to mount a named community vehicle.",
+  "stages": [
+    {
+      "id": "enter_vehicle",
+      "type": "enter_vehicle",
+      "status": "ready",
+      "phase_resource": "mod\\example_enter_vehicle\\phases\\enter_vehicle.questphase",
+      "vehicle_community": "#example_enter_vehicle_vehicle_community",
+      "vehicle_entry": "example_enter_vehicle_vehicle",
+      "objective": "quests/minor_quest/example_enter_vehicle/task",
+      "mappin": "quests/minor_quest/example_enter_vehicle/task/location"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "example_steal_vehicle",
+  "title": "Steal vehicle",
+  "description": "Wait for the player to enter a vehicle and record its acquisition.",
+  "stages": [
+    {
+      "id": "steal_vehicle",
+      "type": "steal_vehicle",
+      "status": "ready",
+      "phase_resource": "mod\\example_steal_vehicle\\phases\\steal_vehicle.questphase",
+      "vehicle_community": "#example_steal_vehicle_vehicle_community",
+      "vehicle_entry": "example_steal_vehicle_vehicle",
+      "objective": "quests/minor_quest/example_steal_vehicle/task",
+      "mappin": "quests/minor_quest/example_steal_vehicle/task/location",
+      "completion_fact": "example_steal_vehicle_vehicle_stolen"
+    }
+  ]
+}

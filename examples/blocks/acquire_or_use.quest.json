@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "example_acquire_or_use",
+  "title": "Acquire or use",
+  "description": "Recognize existing possession or wait for acquisition before running an application.",
+  "stages": [
+    {
+      "id": "acquire_or_use",
+      "type": "acquire_or_use",
+      "status": "ready",
+      "phase_resource": "mod\\example_acquire_or_use\\phases\\acquire_or_use.questphase",
+      "item": "Items.example_access_key",
+      "quantity": 1,
+      "existing_fact": "example_acquire_or_use_existing",
+      "acquired_fact": "example_acquire_or_use_acquired",
+      "application": {
+        "phase": "mod\\example_acquire_or_use\\bindings\\apply.questphase",
+        "entry": "In1",
+        "exits": {
+          "success": "Out1"
+        }
+      }
+    }
+  ]
+}

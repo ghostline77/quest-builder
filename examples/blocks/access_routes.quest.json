@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "example_access_routes",
+  "title": "Access routes",
+  "description": "Race access attempts, cancel losing work and run a shared application.",
+  "stages": [
+    {
+      "id": "access_routes",
+      "type": "access_routes",
+      "status": "ready",
+      "phase_resource": "mod\\example_access_routes\\phases\\access_routes.questphase",
+      "routes": [
+        {
+          "id": "hack",
+          "phase": "mod\\example_access_routes\\bindings\\hack.questphase",
+          "entry": "In1",
+          "exits": {
+            "success": "Out1"
+          }
+        },
+        {
+          "id": "key",
+          "phase": "mod\\example_access_routes\\bindings\\key.questphase",
+          "entry": "In1",
+          "exits": {
+            "success": "Out1"
+          }
+        }
+      ],
+      "application": {
+        "phase": "mod\\example_access_routes\\bindings\\open.questphase",
+        "entry": "In1",
+        "exits": {
+          "success": "Out1"
+        }
+      }
+    }
+  ]
+}

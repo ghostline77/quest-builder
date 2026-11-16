@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "example_braindance_analysis",
+  "title": "Braindance analysis",
+  "description": "Call an authored analysis scene, count clue facts and restore the player on exit.",
+  "stages": [
+    {
+      "id": "braindance_analysis",
+      "type": "braindance_analysis",
+      "status": "ready",
+      "phase_resource": "mod\\example_braindance_analysis\\phases\\braindance_analysis.questphase",
+      "scene": "mod\\example_braindance_analysis\\braindance.scene",
+      "scene_origin": "#example_braindance_analysis_braindance_origin",
+      "player_anchor": "#example_braindance_analysis_braindance_player_hold",
+      "player_return": "#example_braindance_analysis_braindance_player_return",
+      "objective": "quests/minor_quest/example_braindance_analysis/task",
+      "clue_facts": [
+        "bd_clue_a",
+        "bd_clue_b",
+        "bd_clue_c",
+        "bd_clue_d",
+        "bd_clue_e"
+      ],
+      "completion_fact": "example_braindance_analysis_braindance_complete",
+      "scene_entry": "enter",
+      "scene_exit_sockets": [
+        "complete",
+        "abort"
+      ],
+      "teardown_seconds": 0.75,
+      "settle_seconds": 0.125,
+      "exit_enable_seconds": 1.25
+    }
+  ]
+}

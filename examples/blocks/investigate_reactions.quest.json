@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "example_investigate_reactions",
+  "title": "Investigate reactions",
+  "description": "Track scan and reaction completion separately, including resumed progress.",
+  "stages": [
+    {
+      "id": "investigate_reactions",
+      "type": "investigate_reactions",
+      "status": "ready",
+      "phase_resource": "mod\\example_investigate_reactions\\phases\\investigate_reactions.questphase",
+      "clues": [
+        {
+          "id": "a",
+          "object_ref": "#example_investigate_reactions_a",
+          "scan_fact": "example_investigate_reactions_scanned_a",
+          "completion_fact": "example_investigate_reactions_reacted_a",
+          "reaction": {
+            "scene": "mod\\example_investigate_reactions\\scenes\\a.scene",
+            "origin": "#example_investigate_reactions_origin",
+            "entry": "start",
+            "exits": {
+              "success": "end"
+            }
+          }
+        },
+        {
+          "id": "b",
+          "object_ref": "#example_investigate_reactions_b",
+          "scan_fact": "example_investigate_reactions_scanned_b",
+          "completion_fact": "example_investigate_reactions_reacted_b",
+          "reaction": {
+            "scene": "mod\\example_investigate_reactions\\scenes\\b.scene",
+            "origin": "#example_investigate_reactions_origin",
+            "entry": "start",
+            "exits": {
+              "success": "end"
+            }
+          }
+        }
+      ],
+      "discovery_fact": "example_investigate_reactions_direct_discovery"
+    }
+  ]
+}

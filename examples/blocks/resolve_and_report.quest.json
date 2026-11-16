@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "example_resolve_and_report",
+  "title": "Resolve and report",
+  "description": "Resolve a target under an explicit outcome policy before reporting.",
+  "stages": [
+    {
+      "id": "resolve_and_report",
+      "type": "resolve_and_report",
+      "status": "ready",
+      "phase_resource": "mod\\example_resolve_and_report\\phases\\resolve_and_report.questphase",
+      "targets": [
+        {
+          "community": "#example_resolve_and_report_targets",
+          "entry": "target",
+          "resolution": {
+            "killed": true,
+            "unconscious": true,
+            "defeated": true
+          }
+        }
+      ],
+      "resolved_fact": "example_resolve_and_report_resolved",
+      "reported_fact": "example_resolve_and_report_reported",
+      "report": {
+        "phase": "mod\\example_resolve_and_report\\bindings\\report.questphase",
+        "entry": "In1",
+        "exits": {
+          "success": "Out1"
+        }
+      }
+    }
+  ]
+}

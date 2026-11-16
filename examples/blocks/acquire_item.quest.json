@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "example_acquire_item",
+  "title": "Acquire item",
+  "description": "Wait for an item to enter the player's inventory.",
+  "stages": [
+    {
+      "id": "acquire_item",
+      "type": "acquire_item",
+      "status": "ready",
+      "phase_resource": "mod\\example_acquire_item\\phases\\acquire_item.questphase",
+      "item": "Items.example_acquire_item_datacache",
+      "source": "inventory",
+      "objective": "quests/minor_quest/example_acquire_item/task"
+    }
+  ]
+}

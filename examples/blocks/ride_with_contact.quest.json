@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "example_ride_with_contact",
+  "title": "Ride with contact",
+  "description": "Assign passengers to distinct seats and wait for everyone to mount.",
+  "stages": [
+    {
+      "id": "ride_with_contact",
+      "type": "ride_with_contact",
+      "status": "ready",
+      "phase_resource": "mod\\example_ride_with_contact\\phases\\ride_with_contact.questphase",
+      "vehicle_community": "#example_ride_with_contact_vehicle_community",
+      "vehicle_entry": "example_ride_with_contact_vehicle",
+      "contact_community": "#example_ride_with_contact_contacts",
+      "contact_entry": "driver",
+      "objective": "quests/minor_quest/example_ride_with_contact/task",
+      "wait_for_contacts": true,
+      "additional_passengers": [
+        {
+          "community": "#contacts",
+          "entry": "second",
+          "slot": "seat_back_left"
+        },
+        {
+          "community": "#contacts",
+          "entry": "third",
+          "slot": "seat_back_right"
+        }
+      ]
+    }
+  ]
+}

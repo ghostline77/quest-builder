@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "example_community",
+  "title": "Community",
+  "description": "Activate a named community entry and set its attitude group.",
+  "stages": [
+    {
+      "id": "community",
+      "type": "community",
+      "status": "ready",
+      "phase_resource": "mod\\example_community\\phases\\community.questphase",
+      "community": "#example_community_guards",
+      "action": "Activate",
+      "entries": [
+        "guard"
+      ],
+      "attitude_group": "hostile",
+      "completion_fact": "example_community_ready"
+    }
+  ]
+}

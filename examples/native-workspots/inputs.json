@@ -1,0 +1,4 @@
+{
+  "worlds": ["world.json"],
+  "scenes": [{"spec":"scene.json", "dialogue":"dialogue.json"}]
+}

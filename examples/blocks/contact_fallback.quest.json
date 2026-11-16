@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "example_contact_fallback",
+  "title": "Contact fallback",
+  "description": "Try a call and deliver a message when the contact is unavailable or rejects it.",
+  "stages": [
+    {
+      "id": "contact_fallback",
+      "type": "contact_fallback",
+      "status": "ready",
+      "phase_resource": "mod\\example_contact_fallback\\phases\\contact_fallback.questphase",
+      "call": {
+        "scene": "mod\\example_contact_fallback\\scenes\\call.scene",
+        "origin": "#example_contact_fallback_origin",
+        "entry": "start",
+        "exits": {
+          "connected": "connected",
+          "rejected": "rejected"
+        }
+      },
+      "message": "contacts/example_contact_fallback/messages/fallback",
+      "message_fact": "example_contact_fallback_message_delivered",
+      "connected_fact": "example_contact_fallback_connected",
+      "unavailable_facts": [
+        "example_contact_fallback_muted",
+        "example_contact_fallback_busy"
+      ],
+      "outcomes": {
+        "connected": "Connected",
+        "fallback": "Fallback"
+      },
+      "on": {
+        "connected": "$end",
+        "fallback": "$end"
+      }
+    }
+  ]
+}

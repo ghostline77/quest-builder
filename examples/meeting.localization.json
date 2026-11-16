@@ -1,0 +1,6 @@
+{
+  "namespace": "signal",
+  "dialogue": "meeting",
+  "locale": "en-us",
+  "manifest": "meeting.dialogue.json"
+}

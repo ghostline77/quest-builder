@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "example_adaptive_timer",
+  "title": "Adaptive timer",
+  "description": "Choose a weighted delay, select a fact-based profile and defer while busy.",
+  "stages": [
+    {
+      "id": "adaptive_timer",
+      "type": "adaptive_timer",
+      "status": "ready",
+      "phase_resource": "mod\\example_adaptive_timer\\phases\\adaptive_timer.questphase",
+      "clock": "realtime",
+      "choices": [
+        {
+          "weight": 1,
+          "seconds": 25
+        },
+        {
+          "weight": 2,
+          "seconds": 30
+        },
+        {
+          "weight": 2,
+          "seconds": 35
+        }
+      ],
+      "profiles": [
+        {
+          "when_fact": "example_adaptive_timer_hard",
+          "choices": [
+            {
+              "weight": 1,
+              "seconds": 15
+            }
+          ]
+        }
+      ],
+      "busy_fact": "example_adaptive_timer_reading",
+      "max_deferral_seconds": 90
+    }
+  ]
+}

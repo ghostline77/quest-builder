@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "example_time_gate",
+  "title": "Time gate",
+  "description": "Wait one game hour and set a completion fact.",
+  "stages": [
+    {
+      "id": "time_gate",
+      "type": "time_gate",
+      "status": "ready",
+      "phase_resource": "mod\\example_time_gate\\phases\\time_gate.questphase",
+      "hours": 1,
+      "completion_fact": "example_time_gate_complete"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "loot_cache",
+  "prefab_root": "#loot_cache",
+  "origin": { "x": 0, "y": 0, "z": 0 },
+  "loot_containers": [
+    {
+      "ref": "sword_cache",
+      "sector": "exterior",
+      "position": { "from": "origin" },
+      "entity_template": "base\\gameplay\\loot\\containers\\weapon_cases\\weapon_case_small.ent",
+      "appearance": "default",
+      "items": [
+        { "id": "Items.Preset_Katana_Default", "quantity": 1, "chance": 1 }
+      ]
+    }
+  ]
+}

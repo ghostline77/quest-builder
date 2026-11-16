@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "example_entitlement_reconcile",
+  "title": "Entitlement reconcile",
+  "description": "Check entitlement and retire an obsolete offer when already owned.",
+  "stages": [
+    {
+      "id": "entitlement_reconcile",
+      "type": "entitlement_reconcile",
+      "status": "ready",
+      "phase_resource": "mod\\example_entitlement_reconcile\\phases\\entitlement_reconcile.questphase",
+      "entitled_fact": "example_entitlement_reconcile_vehicle_entitled",
+      "owned_fact": "example_entitlement_reconcile_vehicle_owned",
+      "retire": [
+        {
+          "kind": "objective",
+          "path": "quests/example_entitlement_reconcile/offer",
+          "state": "Inactive"
+        },
+        {
+          "kind": "message",
+          "path": "contacts/example_entitlement_reconcile/messages/offer",
+          "state": "Inactive"
+        },
+        {
+          "kind": "fact",
+          "fact": "example_entitlement_reconcile_offer_retired"
+        }
+      ],
+      "outcomes": {
+        "owned": "Owned",
+        "unowned": "Unowned"
+      },
+      "on": {
+        "owned": "$end",
+        "unowned": "$end"
+      }
+    }
+  ]
+}

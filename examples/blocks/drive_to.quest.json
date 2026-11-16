@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "example_drive_to",
+  "title": "Drive to",
+  "description": "Require a named vehicle to pass waypoints and reach its destination.",
+  "stages": [
+    {
+      "id": "drive_to",
+      "type": "drive_to",
+      "status": "ready",
+      "phase_resource": "mod\\example_drive_to\\phases\\drive_to.questphase",
+      "vehicle_community": "#example_drive_to_vehicle_community",
+      "vehicle_entry": "example_drive_to_vehicle",
+      "destination": "#example_drive_to_drive_destination",
+      "completion_fact": "example_drive_to_drive_complete",
+      "objective": "quests/minor_quest/example_drive_to/task",
+      "mappin": "quests/minor_quest/example_drive_to/task/location",
+      "waypoints": [
+        "#waypoint_a",
+        "#waypoint_b"
+      ]
+    }
+  ]
+}

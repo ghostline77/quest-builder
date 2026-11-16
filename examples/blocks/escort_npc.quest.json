@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "example_escort_npc",
+  "title": "Escort npc",
+  "description": "Assign a follower and monitor three route gates.",
+  "stages": [
+    {
+      "id": "escort_npc",
+      "type": "escort_npc",
+      "status": "ready",
+      "phase_resource": "mod\\example_escort_npc\\phases\\escort_npc.questphase",
+      "community": "#example_escort_npc_community",
+      "entry": "escort",
+      "destinations": [
+        "#example_escort_npc_destination_a",
+        "#example_escort_npc_destination_b",
+        "#example_escort_npc_destination_c"
+      ],
+      "objective": "quests/minor_quest/example_escort_npc/task",
+      "mappin": "quests/minor_quest/example_escort_npc/task/location",
+      "completion_fact": "example_escort_npc_escort_complete"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "example_release_or_rescue_npc",
+  "title": "Release or rescue npc",
+  "description": "Unlock a device and wait for rescued community entries.",
+  "stages": [
+    {
+      "id": "release_or_rescue_npc",
+      "type": "release_or_rescue_npc",
+      "status": "ready",
+      "phase_resource": "mod\\example_release_or_rescue_npc\\phases\\release_or_rescue_npc.questphase",
+      "community": "#example_release_or_rescue_npc_prisoners",
+      "entry": "rescued",
+      "device": "#example_release_or_rescue_npc_lock",
+      "controller_class": "DoorControllerPS",
+      "action": "QuestForceUnlock",
+      "completion_function": "IsUnlocked",
+      "completion_fact": "example_release_or_rescue_npc_rescue_complete",
+      "objective": "quests/minor_quest/example_release_or_rescue_npc/task",
+      "additional_entries": [
+        "second",
+        "third"
+      ]
+    }
+  ]
+}

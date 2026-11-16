@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "example_owned_scope",
+  "title": "Owned scope",
+  "description": "Own child work and a progress notification, acknowledge restoration and commit.",
+  "stages": [
+    {
+      "id": "owned_scope",
+      "type": "owned_scope",
+      "status": "ready",
+      "phase_resource": "mod\\example_owned_scope\\phases\\owned_scope.questphase",
+      "child": {
+        "phase": "mod\\example_owned_scope\\bindings\\work.questphase",
+        "entry": "In1",
+        "exits": {
+          "success": "Out1",
+          "milestone": "Progress"
+        }
+      },
+      "notifications": {
+        "milestone": "example_owned_scope_progress"
+      },
+      "commit_fact": "example_owned_scope_scope_done",
+      "restore": [
+        {
+          "kind": "weather_reset",
+          "source": "example_owned_scope_scope"
+        },
+        {
+          "kind": "phase",
+          "phase": "mod\\example_owned_scope\\bindings\\restore.questphase",
+          "entry": "In1",
+          "exit": "Out1"
+        },
+        {
+          "kind": "prefab_variant",
+          "prefab": "#example_owned_scope_world",
+          "variant": "default",
+          "show": true
+        }
+      ]
+    }
+  ]
+}

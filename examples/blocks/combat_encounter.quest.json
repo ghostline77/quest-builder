@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "example_combat_encounter",
+  "title": "Combat encounter",
+  "description": "Activate named combatants and finish when both are defeated, allowing nonlethal outcomes.",
+  "stages": [
+    {
+      "id": "combat_encounter",
+      "type": "combat_encounter",
+      "status": "ready",
+      "phase_resource": "mod\\example_combat_encounter\\phases\\combat_encounter.questphase",
+      "community": "#example_combat_encounter_guards",
+      "entries": [
+        "guard_one",
+        "guard_two"
+      ],
+      "hostility": "neutral_to_hostile",
+      "completion": "named_defeated",
+      "nonlethal_allowed": true,
+      "completion_fact": "example_combat_encounter_resolved",
+      "cleanup_on_exit": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {
+      "id": "complete",
+      "steps": [
+        {"save": "before_completion"},
+        {"event": {"event_id": "first", "stage": "wait", "outcome": "success"}, "expect": {"terminal_outcome": "success"}},
+        {"load": "before_completion", "expect": {"active_stage": "wait"}},
+        {"event": {"event_id": "after_reload", "stage": "wait", "outcome": "success"}},
+        {"event": {"event_id": "after_reload", "stage": "wait", "outcome": "success"}, "expect": {"result": "duplicate"}}
+      ],
+      "expect": {"terminal_outcome": "success"}
+    }
+  ]
+}

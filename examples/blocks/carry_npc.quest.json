@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "example_carry_npc",
+  "title": "Carry npc",
+  "description": "Observe a carried NPC passing waypoints and reaching a delivery area.",
+  "stages": [
+    {
+      "id": "carry_npc",
+      "type": "carry_npc",
+      "status": "ready",
+      "phase_resource": "mod\\example_carry_npc\\phases\\carry_npc.questphase",
+      "community": "#example_carry_npc_community",
+      "entry": "carried",
+      "destination": "#example_carry_npc_destination",
+      "objective": "quests/minor_quest/example_carry_npc/task",
+      "waypoints": [
+        "#carry_a",
+        "#carry_b"
+      ],
+      "completion_fact": "target_delivered",
+      "mappin": "quests/minor_quest/example_carry_npc/task/location"
+    }
+  ]
+}

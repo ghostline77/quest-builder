@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "example_leave_area",
+  "title": "Leave area",
+  "description": "Finish after leaving a trigger and deactivate an owned community.",
+  "stages": [
+    {
+      "id": "leave_area",
+      "type": "leave_area",
+      "status": "ready",
+      "phase_resource": "mod\\example_leave_area\\phases\\leave_area.questphase",
+      "trigger": "#example_leave_area_tr_relay",
+      "objective": "quests/minor_quest/example_leave_area/task",
+      "description_entry": "quests/minor_quest/example_leave_area/task/description",
+      "cleanup_community": "#example_leave_area_com_guards",
+      "completion_fact": "example_leave_area_complete"
+    }
+  ]
+}

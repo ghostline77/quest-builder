@@ -1,0 +1,30 @@
+//! Native quest authoring, graph construction and resource generation.
+#![recursion_limit = "512"]
+
+pub mod audit;
+pub mod bootstrap;
+pub mod compiler;
+pub mod composition;
+pub mod contracts;
+pub mod conversation_metadata;
+pub mod corpus;
+pub mod evidence;
+pub mod fx;
+pub mod graph;
+pub mod inspect;
+pub mod install;
+pub mod journal;
+pub mod lifecycle;
+pub mod localization;
+pub mod manifest;
+pub mod native;
+pub mod nodes;
+pub mod package;
+pub mod project;
+pub mod quest_core;
+pub mod publication;
+pub mod scenario;
+pub mod scene;
+pub mod ui;
+pub mod workspot;
+pub mod world;

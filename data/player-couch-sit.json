@@ -1,0 +1,801 @@
+{
+  "provenance": {
+    "scene": "base/quest/side_quests/sq028/scenes/sq028_02_welcome_aboard.scene",
+    "section": 13,
+    "workspot_instance": 148,
+    "note": "Native couch transition, camera trajectories and bindings; origin rebased relative to the native couch instance. Runtime actor, event and workspot IDs are rebound."
+  },
+  "event": {
+    "$type": "scnPlaySkAnimEvent",
+    "id": {
+      "$type": "scnSceneEventId",
+      "id": "2005404304107794456"
+    },
+    "duration": 3067,
+    "scalingData": {
+      "Data": {
+        "$type": "scnScalingData_KeepRelationWithOtherEvents",
+        "groupRfrncNdspaceEndtime": {
+          "$type": "scnSceneTime",
+          "stu": 3067
+        }
+      }
+    },
+    "animData": {
+      "$type": "scneventsPlayAnimEventExData",
+      "basic": {
+        "$type": "scneventsPlayAnimEventData",
+        "blendIn": 0.5,
+        "blendOut": 0.5
+      }
+    },
+    "performer": {
+      "$type": "scnPerformerId",
+      "id": 769
+    },
+    "actorComponent": {
+      "$type": "CName",
+      "$storage": "string",
+      "$value": "body"
+    },
+    "gameplayAnimName": {
+      "Data": {
+        "$type": "scnAnimName",
+        "type": "direct",
+        "unk1": [
+          {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "sit_couch_lean0__rf_on_couch__01"
+          }
+        ],
+        "unk2": []
+      }
+    },
+    "blendOverride": "Custom_PitchYaw",
+    "cameraBlendInDuration": 1.0,
+    "cameraBlendOutDuration": 1.0,
+    "stayInScene": true,
+    "idleIsMountedWorkspot": true,
+    "cameraParallaxWeight": 1.0,
+    "yawLimitLeft": 89.94906616210938,
+    "yawLimitRight": 75.05093383789062,
+    "pitchLimitTop": 27.773075103759766,
+    "pitchLimitBottom": 62.226924896240234,
+    "genderSpecificParams": [
+      {
+        "$type": "scnfppGenderSpecificParams",
+        "genderMask": {
+          "$type": "scnGenderMask",
+          "mask": 2
+        },
+        "transitionBlendInTrajectorySpaceAngles": [
+          {
+            "$type": "EulerAngles",
+            "Pitch": -0.39307406544685364,
+            "Yaw": 0.06859030574560165,
+            "Roll": 0.012771991081535816
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -1.3955415487289429,
+            "Yaw": -0.008797863498330116,
+            "Roll": 0.04735058918595314
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -2.8279097080230713,
+            "Yaw": -0.22360724210739136,
+            "Roll": 0.15529635548591614
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -4.62091588973999,
+            "Yaw": -0.6518142223358154,
+            "Roll": 0.20676739513874054
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -6.702110767364502,
+            "Yaw": -1.2085025310516357,
+            "Roll": 0.3387199938297272
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -9.060648918151855,
+            "Yaw": -1.883793830871582,
+            "Roll": 0.511066198348999
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -11.717658042907715,
+            "Yaw": -2.3904824256896973,
+            "Roll": 0.7297195196151733
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.744099617004395,
+            "Yaw": -2.4559831619262695,
+            "Roll": 1.0004348754882812
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -18.166444778442383,
+            "Yaw": -1.9671404361724854,
+            "Roll": 1.331154227256775
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -20.666196823120117,
+            "Yaw": -0.5360534191131592,
+            "Roll": 1.7285737991333008
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -22.25118064880371,
+            "Yaw": 1.739959716796875,
+            "Roll": 2.206234931945801
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -23.179773330688477,
+            "Yaw": 4.742949962615967,
+            "Roll": 2.767918825149536
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -23.42006492614746,
+            "Yaw": 8.252145767211914,
+            "Roll": 3.431539297103882
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -23.265953063964844,
+            "Yaw": 12.377401351928711,
+            "Roll": 4.222099304199219
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -22.87994384765625,
+            "Yaw": 17.044286727905273,
+            "Roll": 5.295295238494873
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -22.287343978881836,
+            "Yaw": 21.983322143554688,
+            "Roll": 6.683498382568359
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -21.521556854248047,
+            "Yaw": 27.048559188842773,
+            "Roll": 8.235954284667969
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -20.626012802124023,
+            "Yaw": 32.20679473876953,
+            "Roll": 9.823343276977539
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -19.646709442138672,
+            "Yaw": 37.4677734375,
+            "Roll": 11.332603454589844
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -18.623210906982422,
+            "Yaw": 42.45370101928711,
+            "Roll": 12.64477252960205
+          }
+        ],
+        "transitionBlendInCameraSpace": [
+          0.0,
+          0.05263158679008484,
+          0.10526315867900848,
+          0.15789473056793213,
+          0.21052631735801697,
+          0.2631579041481018,
+          0.31578946113586426,
+          0.3684210479259491,
+          0.42105263471603394,
+          0.4736842215061188,
+          0.5263158082962036,
+          0.5789473652839661,
+          0.6315789222717285,
+          0.6842105388641357,
+          0.7368420958518982,
+          0.7894737124443054,
+          0.8421052694320679,
+          0.8947368264198303,
+          0.9473684430122375,
+          1.0
+        ],
+        "transitionEndInputAngles": [
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.317569732666016,
+            "Yaw": 20.396669387817383,
+            "Roll": -4.765210151672363
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.62009048461914,
+            "Yaw": 19.641847610473633,
+            "Roll": -4.351856708526611
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.484050750732422,
+            "Yaw": 19.039859771728516,
+            "Roll": -3.984309434890747
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -13.901668548583984,
+            "Yaw": 18.568506240844727,
+            "Roll": -3.6433422565460205
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -12.934052467346191,
+            "Yaw": 18.211402893066406,
+            "Roll": -3.3362293243408203
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -11.72209644317627,
+            "Yaw": 17.956302642822266,
+            "Roll": -3.0669522285461426
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -10.486939430236816,
+            "Yaw": 17.790958404541016,
+            "Roll": -2.8343117237091064
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -9.392099380493164,
+            "Yaw": 17.713651657104492,
+            "Roll": -2.6698195934295654
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -8.815155982971191,
+            "Yaw": 17.704833984375,
+            "Roll": -2.4224741458892822
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -8.631834983825684,
+            "Yaw": 17.75412368774414,
+            "Roll": -2.207199811935425
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -8.674154281616211,
+            "Yaw": 17.880277633666992,
+            "Roll": -2.057790517807007
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -9.055533409118652,
+            "Yaw": 18.057540893554688,
+            "Roll": -1.8330543041229248
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -9.461219787597656,
+            "Yaw": 18.271244049072266,
+            "Roll": -1.677098274230957
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -10.04774284362793,
+            "Yaw": 18.530317306518555,
+            "Roll": -1.4820365905761719
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -10.712447166442871,
+            "Yaw": 18.824277877807617,
+            "Roll": -1.2824468612670898
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -11.426472663879395,
+            "Yaw": 19.14748764038086,
+            "Roll": -1.0777151584625244
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -12.16579818725586,
+            "Yaw": 19.49446678161621,
+            "Roll": -0.8677828311920166
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -12.953802108764648,
+            "Yaw": 19.864948272705078,
+            "Roll": -0.6159101724624634
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -13.640583038330078,
+            "Yaw": 20.23665428161621,
+            "Roll": -0.4352145195007324
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.34207820892334,
+            "Yaw": 20.61918067932129,
+            "Roll": -0.2162788361310959
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.999998092651367,
+            "Yaw": 21.000001907348633,
+            "Roll": -8.838914595798997e-07
+          }
+        ]
+      },
+      {
+        "$type": "scnfppGenderSpecificParams",
+        "genderMask": {
+          "$type": "scnGenderMask",
+          "mask": 1
+        },
+        "transitionBlendInTrajectorySpaceAngles": [
+          {
+            "$type": "EulerAngles",
+            "Pitch": -0.39307406544685364,
+            "Yaw": 0.06859030574560165,
+            "Roll": 0.012771991081535816
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -1.3955415487289429,
+            "Yaw": -0.008797863498330116,
+            "Roll": 0.04735058918595314
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -2.8279097080230713,
+            "Yaw": -0.22360724210739136,
+            "Roll": 0.15529635548591614
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -4.62091588973999,
+            "Yaw": -0.6518142223358154,
+            "Roll": 0.20676739513874054
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -6.702110767364502,
+            "Yaw": -1.2085025310516357,
+            "Roll": 0.3387199938297272
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -9.060648918151855,
+            "Yaw": -1.883793830871582,
+            "Roll": 0.511066198348999
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -11.717658042907715,
+            "Yaw": -2.3904824256896973,
+            "Roll": 0.7297195196151733
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.744099617004395,
+            "Yaw": -2.4559831619262695,
+            "Roll": 1.0004348754882812
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -18.166444778442383,
+            "Yaw": -1.9671404361724854,
+            "Roll": 1.331154227256775
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -20.666196823120117,
+            "Yaw": -0.5360534191131592,
+            "Roll": 1.7285737991333008
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -22.25118064880371,
+            "Yaw": 1.739959716796875,
+            "Roll": 2.206234931945801
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -23.179773330688477,
+            "Yaw": 4.742949962615967,
+            "Roll": 2.767918825149536
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -23.42006492614746,
+            "Yaw": 8.252145767211914,
+            "Roll": 3.431539297103882
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -23.265953063964844,
+            "Yaw": 12.377401351928711,
+            "Roll": 4.222099304199219
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -22.87994384765625,
+            "Yaw": 17.044286727905273,
+            "Roll": 5.295295238494873
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -22.287343978881836,
+            "Yaw": 21.983322143554688,
+            "Roll": 6.683498382568359
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -21.521556854248047,
+            "Yaw": 27.048559188842773,
+            "Roll": 8.235954284667969
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -20.626012802124023,
+            "Yaw": 32.20679473876953,
+            "Roll": 9.823343276977539
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -19.646709442138672,
+            "Yaw": 37.4677734375,
+            "Roll": 11.332603454589844
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -18.623210906982422,
+            "Yaw": 42.45370101928711,
+            "Roll": 12.64477252960205
+          }
+        ],
+        "transitionBlendInCameraSpace": [
+          0.0,
+          0.05263158679008484,
+          0.10526315867900848,
+          0.15789473056793213,
+          0.21052631735801697,
+          0.2631579041481018,
+          0.31578946113586426,
+          0.3684210479259491,
+          0.42105263471603394,
+          0.4736842215061188,
+          0.5263158082962036,
+          0.5789473652839661,
+          0.6315789222717285,
+          0.6842105388641357,
+          0.7368420958518982,
+          0.7894737124443054,
+          0.8421052694320679,
+          0.8947368264198303,
+          0.9473684430122375,
+          1.0
+        ],
+        "transitionEndInputAngles": [
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.317569732666016,
+            "Yaw": 20.396669387817383,
+            "Roll": -4.765210151672363
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.62009048461914,
+            "Yaw": 19.641847610473633,
+            "Roll": -4.351856708526611
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.484050750732422,
+            "Yaw": 19.039859771728516,
+            "Roll": -3.984309434890747
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -13.901668548583984,
+            "Yaw": 18.568506240844727,
+            "Roll": -3.6433422565460205
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -12.934052467346191,
+            "Yaw": 18.211402893066406,
+            "Roll": -3.3362293243408203
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -11.72209644317627,
+            "Yaw": 17.956302642822266,
+            "Roll": -3.0669522285461426
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -10.486939430236816,
+            "Yaw": 17.790958404541016,
+            "Roll": -2.8343117237091064
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -9.392099380493164,
+            "Yaw": 17.713651657104492,
+            "Roll": -2.6698195934295654
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -8.815155982971191,
+            "Yaw": 17.704833984375,
+            "Roll": -2.4224741458892822
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -8.631834983825684,
+            "Yaw": 17.75412368774414,
+            "Roll": -2.207199811935425
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -8.674154281616211,
+            "Yaw": 17.880277633666992,
+            "Roll": -2.057790517807007
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -9.055533409118652,
+            "Yaw": 18.057540893554688,
+            "Roll": -1.8330543041229248
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -9.461219787597656,
+            "Yaw": 18.271244049072266,
+            "Roll": -1.677098274230957
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -10.04774284362793,
+            "Yaw": 18.530317306518555,
+            "Roll": -1.4820365905761719
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -10.712447166442871,
+            "Yaw": 18.824277877807617,
+            "Roll": -1.2824468612670898
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -11.426472663879395,
+            "Yaw": 19.14748764038086,
+            "Roll": -1.0777151584625244
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -12.16579818725586,
+            "Yaw": 19.49446678161621,
+            "Roll": -0.8677828311920166
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -12.953802108764648,
+            "Yaw": 19.864948272705078,
+            "Roll": -0.6159101724624634
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -13.640583038330078,
+            "Yaw": 20.23665428161621,
+            "Roll": -0.4352145195007324
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.34207820892334,
+            "Yaw": 20.61918067932129,
+            "Roll": -0.2162788361310959
+          },
+          {
+            "$type": "EulerAngles",
+            "Pitch": -14.999998092651367,
+            "Yaw": 21.000001907348633,
+            "Roll": -8.838914595798997e-07
+          }
+        ]
+      }
+    ],
+    "animName": {
+      "Data": {
+        "$type": "scnAnimName",
+        "type": "direct",
+        "unk1": [
+          {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "stand__2h_on_sides__01__to__sit_couch_lean0__rf_on_couch__01__turn135__01"
+          }
+        ],
+        "unk2": []
+      }
+    },
+    "poseBlendOutWorkspot": {
+      "Data": {
+        "$type": "scnEventBlendWorkspotSetupParameters",
+        "workspotId": {
+          "$type": "scnSceneWorkspotInstanceId",
+          "id": 148
+        },
+        "sequenceEntryId": {
+          "$type": "workWorkEntryId",
+          "id": 2
+        }
+      }
+    },
+    "rootMotionData": {
+      "$type": "scnPlaySkAnimRootMotionData",
+      "enabled": true,
+      "originMarker": {
+        "$type": "scnMarker",
+        "type": "Entity",
+        "entityRef": {
+          "$type": "gameEntityReference",
+          "reference": {
+            "$type": "NodeRef",
+            "$storage": "string",
+            "$value": "#sq028_com_yacht"
+          },
+          "names": [
+            {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "yacht"
+            }
+          ]
+        },
+        "slotName": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "sq028_player_couch"
+        }
+      },
+      "originOffset": {
+        "$type": "Transform",
+        "position": {
+          "$type": "Vector4",
+          "X": 0.8774804144810697,
+          "Y": 0.4135883143550684,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0.7173367018663461,
+          "r": 0.6967266724875063
+        }
+      }
+    },
+    "playerData": {
+      "$type": "scnPlayerAnimData",
+      "tierData": {
+        "Data": {
+          "$type": "gameSceneTier4Data",
+          "emptyHands": true,
+          "userDebugInfo": "ChangeWorkEvent base\\quest\\side_quests\\sq028\\scenes\\sq028_02_welcome_aboard.scenesolution\n"
+        }
+      }
+    }
+  },
+  "player_params": {
+    "$type": "questUseWorkspotPlayerParams",
+    "cameraSettings": {
+      "$type": "gameTier3CameraSettings",
+      "yawLeftLimit": 89.94906616210938,
+      "yawRightLimit": 75.05093383789062,
+      "pitchTopLimit": 27.773075103759766,
+      "pitchBottomLimit": 62.226924896240234,
+      "pitchSpeedMultiplier": 0.75,
+      "yawSpeedMultiplier": 0.75
+    },
+    "emptyHands": true,
+    "vehicleProceduralCameraWeight": 0.0
+  },
+  "bindings": [
+    {
+      "set": {
+        "$type": "scnCinematicAnimSetSRRef",
+        "asyncAnimSet": {
+          "DepotPath": {
+            "$type": "ResourcePath",
+            "$storage": "string",
+            "$value": "base\\animations\\quest\\side_quests\\sq028\\sq028_02_welcome_aboard\\body\\sq028_02_welcome_aboard__player_male.anims"
+          },
+          "Flags": "Soft"
+        }
+      },
+      "names": {
+        "$type": "scnAnimSetAnimNames",
+        "animationNames": [
+          {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "sit_couch_lean0__rf_on_couch__01"
+          },
+          {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "stand__2h_on_sides__01__to__sit_couch_lean0__rf_on_couch__01__turn135__01"
+          }
+        ]
+      }
+    },
+    {
+      "set": {
+        "$type": "scnCinematicAnimSetSRRef",
+        "asyncAnimSet": {
+          "DepotPath": {
+            "$type": "ResourcePath",
+            "$storage": "string",
+            "$value": "base\\animations\\player\\interactive_scene\\player_female__transitions.anims"
+          },
+          "Flags": "Soft"
+        },
+        "priority": 100,
+        "isOverride": true
+      },
+      "names": {
+        "$type": "scnAnimSetAnimNames",
+        "animationNames": [
+          {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "stand__2h_on_sides__01__to__stand_rail_lean270__lh_on_rail__01__turn90__01"
+          }
+        ]
+      }
+    },
+    {
+      "set": {
+        "$type": "scnCinematicAnimSetSRRef",
+        "asyncAnimSet": {
+          "DepotPath": {
+            "$type": "ResourcePath",
+            "$storage": "string",
+            "$value": "base\\animations\\player\\interactive_scene\\player_male__transitions.anims"
+          },
+          "Flags": "Soft"
+        },
+        "priority": 200
+      },
+      "names": {
+        "$type": "scnAnimSetAnimNames",
+        "animationNames": [
+          {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "stand__2h_on_sides__01__to__stand_rail_lean270__lh_on_rail__01__turn90__01"
+          }
+        ]
+      }
+    }
+  ]
+}

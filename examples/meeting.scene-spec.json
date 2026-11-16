@@ -1,0 +1,55 @@
+{
+  "name": "meeting",
+  "archive_path": "mod\\signal\\scenes\\meeting.scene",
+  "manifest": "meeting.dialogue.json",
+  "actors": [
+    {
+      "key": "contact",
+      "kind": "community",
+      "community_ref": "#contact",
+      "entry": "contact"
+    },
+    {
+      "key": "player",
+      "kind": "player"
+    }
+  ],
+  "spoken_line_order": [
+    "welcome"
+  ],
+  "choice_line_order": [],
+  "entry_point": {
+    "name": "start",
+    "node": "begin"
+  },
+  "exit_points": [
+    {
+      "name": "end",
+      "node": "finished"
+    }
+  ],
+  "start_node": {
+    "key": "begin",
+    "on_start": [
+      {
+        "node": "greeting"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "key": "greeting",
+      "lines": [
+        "welcome"
+      ],
+      "on_end": [
+        {
+          "node": "finished"
+        }
+      ]
+    }
+  ],
+  "end_node": {
+    "key": "finished"
+  }
+}

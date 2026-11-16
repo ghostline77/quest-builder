@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "example_deliver_drop_point",
+  "title": "Deliver drop point",
+  "description": "Reserve a drop point for an item and wait for its deposit fact.",
+  "stages": [
+    {
+      "id": "deliver_drop_point",
+      "type": "deliver_drop_point",
+      "status": "ready",
+      "phase_resource": "mod\\example_deliver_drop_point\\phases\\deliver_drop_point.questphase",
+      "item": "Items.example_deliver_drop_point_package",
+      "drop_point": "#example_deliver_drop_point_drop_point",
+      "deposit_fact": "example_deliver_drop_point_package_deposited",
+      "objective": "quests/minor_quest/example_deliver_drop_point/task"
+    }
+  ]
+}

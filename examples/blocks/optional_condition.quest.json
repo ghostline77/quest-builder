@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "example_optional_condition",
+  "title": "Optional condition",
+  "description": "Evaluate a fact immediately and record optional success or failure.",
+  "stages": [
+    {
+      "id": "optional_condition",
+      "type": "optional_condition",
+      "status": "ready",
+      "phase_resource": "mod\\example_optional_condition\\phases\\optional_condition.questphase",
+      "objective": "quests/minor_quest/example_optional_condition/task",
+      "condition": {
+        "kind": "fact",
+        "value": "example_optional_condition_condition"
+      },
+      "success_fact": "example_optional_condition_optional_success",
+      "failure_fact": "example_optional_condition_optional_failure",
+      "evaluation": "on_entry",
+      "inputs": {
+        "start": "Begin"
+      },
+      "outcomes": {
+        "success": "Resolved"
+      },
+      "on": {
+        "success": "$end"
+      }
+    }
+  ]
+}
