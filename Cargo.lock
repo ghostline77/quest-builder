@@ -637,6 +637,7 @@ dependencies = [
 [[package]]
 name = "ghostline-red"
 version = "0.1.0"
+source = "git+https://github.com/ghostline77/ghostline-red.git?rev=6a69b41516d56e8cbebb3eaee43d4317a163521e#6a69b41516d56e8cbebb3eaee43d4317a163521e"
 dependencies = [
  "aho-corasick",
  "anyhow",

@@ -4,13 +4,22 @@ version = "0.1.0"
 edition = "2024"
 description = "Standalone native Cyberpunk 2077 quest authoring"
 
+[features]
+default = ["build-ui"]
+build-ui = []
+
+[[bin]]
+name = "ghostline-quest-builder"
+path = "src/main.rs"
+required-features = ["build-ui"]
+
 [dependencies]
 anyhow = "1"
 axum = "0.8"
 base64 = "0.22"
 clap = { version = "4", features = ["derive"] }
 crc32fast = "1"
-ghostline-red = { path = "../ghostline-red" }
+ghostline-red = { git = "https://github.com/ghostline77/ghostline-red.git", rev = "6a69b41516d56e8cbebb3eaee43d4317a163521e" }
 jsonschema = { version = "0.60.2", default-features = false }
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["preserve_order", "unbounded_depth"] }

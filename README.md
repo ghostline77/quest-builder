@@ -17,12 +17,16 @@ authoring specifications. The compiler generates resources directly through
 
 ## Build
 
-Keep the sibling `ghostline-red` checkout beside `quest-builder`, then build
-from this repository with a stable Rust toolchain:
+Build from this repository with a stable Rust toolchain and Node.js 20 or newer.
+Cargo fetches `ghostline-red` from GitHub. The frontend build installs its locked
+`ui-core` GitHub dependency automatically; no sibling checkouts are required:
 
 ```powershell
 cargo build --release --locked
 ```
+
+Library consumers can set `default-features = false` to skip the editor frontend
+and its Node.js build requirement.
 
 The executable is `target/release/ghostline-quest-builder.exe` on Windows, or
 `target/release/ghostline-quest-builder` on Linux.
