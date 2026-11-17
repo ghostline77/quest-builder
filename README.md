@@ -15,6 +15,10 @@ authoring specifications. The compiler generates resources directly through
 | Package and install a build | [Packages](docs/reference.md#packages) and [installation](docs/reference.md#publication-and-installation) |
 | Inspect resources and record playtest evidence | [Inspection and evidence](docs/reference.md#inspection-scenarios-and-evidence) |
 
+## Windows distribution
+
+Run `ghostline-quest-builder.exe` from the Windows tools package. Keep `ghostline-character-builder.exe` beside it for character exports and set `GHOSTLINE_ITEMS_CATALOGUE` to the separate `items-catalogue` folder containing `manifest.json`.
+
 ## Build
 
 Build from this repository with a stable Rust toolchain and Node.js 20 or newer.
