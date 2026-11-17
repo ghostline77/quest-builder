@@ -6,10 +6,11 @@ Windows developer tool for loading named saves, reloading CET Lua mods and enabl
 cargo build --release --manifest-path tools/playtest/Cargo.toml --target-dir target
 $tool = './target/release/ghostline-playtest.exe'
 $game = 'C:/Games/Cyberpunk 2077'
+$save = Read-Host 'Save folder name'
 & $tool --game $game install
-& $tool --game $game launch ManualSave-17
+& $tool --game $game launch $save
 & $tool --game $game list-saves
-& $tool --game $game load ManualSave-17
+& $tool --game $game load $save
 & $tool --game $game reload
 & $tool --game $game freefly on
 & $tool --game $game freefly off
