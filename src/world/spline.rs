@@ -175,12 +175,12 @@ pub(super) fn build(spec: &Value, reference: &str, h: &mut Handles, race: bool) 
                 tangents.len() == 2,
                 "each spline point needs two tangent vectors"
             );
-            // Native SplinePoint stores the forward (outgoing) handle first.
+            // Native SplinePoint stores incoming then outgoing handles.
             // Explicit handles already use native order and must stay untouched.
-            outgoing = Position::read(&tangents[0])?;
-            incoming = Position::read(&tangents[1])?;
+            incoming = Position::read(&tangents[0])?;
+            outgoing = Position::read(&tangents[1])?;
         }
-        emitted.push(json!({"$type":"SplinePoint","automaticTangents":raw[index].get("automatic_tangents").cloned().unwrap_or(json!(0)),"continuousTangents":1,"id":0,"position":point.vector(),"rotation":geometry::quaternion(0.),"tangents":{"Elements":[outgoing.vector(),incoming.vector()]}}));
+        emitted.push(json!({"$type":"SplinePoint","automaticTangents":raw[index].get("automatic_tangents").cloned().unwrap_or(json!(0)),"continuousTangents":1,"id":0,"position":point.vector(),"rotation":geometry::quaternion(0.),"tangents":{"Elements":[incoming.vector(),outgoing.vector()]}}));
     }
     let patrol = list(spec, "patrol_spots")?;
     ensure!(
@@ -241,8 +241,9 @@ mod tests {
             .unwrap()
             .as_array()
             .unwrap();
-        let first = points[0]["tangents"]["Elements"][0]["X"].as_f64().unwrap();
-        let second = 9. + points[1]["tangents"]["Elements"][1]["X"].as_f64().unwrap();
+        // Native segment evaluation uses the start's handle 1 and end's handle 0.
+        let first = points[0]["tangents"]["Elements"][1]["X"].as_f64().unwrap();
+        let second = 9. + points[1]["tangents"]["Elements"][0]["X"].as_f64().unwrap();
         assert_eq!(first, 3.);
         assert_eq!(second, 6.);
         for i in 0..=20 {
